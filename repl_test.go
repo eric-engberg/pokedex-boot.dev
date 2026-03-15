@@ -6,13 +6,25 @@ import (
 
 func TestCleanInput(t *testing.T) {
 	tests := []struct {
-		input string
+		input    string
 		expected []string
 	}{
-		{input: "help", expected: []string{"help"}},
-		{input: "help me", expected: []string{"help", "me"}},
-		{input: "help me please", expected: []string{"help", "me", "please"}},
-		{input: "help ME please", expected: []string{"help", "me", "please"}},
+		{
+			input:    "  ",
+			expected: []string{},
+		},
+		{
+			input:    "  hello  ",
+			expected: []string{"hello"},
+		},
+		{
+			input:    "  hello  world  ",
+			expected: []string{"hello", "world"},
+		},
+		{
+			input:    "  HellO  World  ",
+			expected: []string{"hello", "world"},
+		},
 	}
 
 	for _, test := range tests {

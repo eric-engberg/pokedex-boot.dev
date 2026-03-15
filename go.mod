@@ -1,3 +1,3 @@
-module pokedex
+module github.com/eric-engberg/pokedex-boot.dev
 
-go 1.25.7
+go 1.26.1
