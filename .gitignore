@@ -8,6 +8,7 @@
 *.so
 *.dylib
 pokedex
+pokedex-boot.dev
 
 # Test binary, built with `go test -c`
 *.test
